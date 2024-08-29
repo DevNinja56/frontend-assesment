@@ -1,0 +1,176 @@
+@import "_config";
+
+.datepicker {
+    display: inline-block;
+    -webkit-tap-highlight-color: $black;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 0;
+  
+      th,
+      td {
+        width: calc(100% / 7);
+        padding: 0.0625rem;
+      }
+  
+      th {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 0.5rem;
+        line-height: 4;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  
+    &__wrapper {
+      color: $secondary;
+      border-radius: 0.125rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      position: relative;
+      z-index: 1;
+      background: $gray-black;
+      border: 1px solid $gray;
+      width: 16rem;
+  
+      &::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+  
+    &:not(.is-inline) &__wrapper {
+      box-shadow: 0 1px 3px $black, 0 1px 2px $black;
+      margin: 0.25rem 0;
+    }
+  
+    &__header {
+      position: relative;
+      text-align: center;
+      padding: 0.25rem;
+      justify-content: center;
+      border-bottom: 1px solid $white;
+      background: $primary;
+      color: $white;
+    }
+  
+    &__title {
+      display: inline-block;
+      padding: 0.25rem;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      font-weight: bold;
+    }
+  
+    &__prev,
+    &__next {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      outline: none;
+      width: 2rem;
+      line-height: 2rem;
+      border-radius: 50%;
+      background: no-repeat center / 60%;
+      opacity: 0.8;
+  
+      &:hover {
+        opacity: 1;
+      }
+  
+      &.is-disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.4;
+      }
+    }
+  
+    &__prev {
+      float: left;
+    }
+  
+    &__next {
+      float: right;
+    }
+  
+    &__time {
+      padding: 0.5rem 1rem;
+      margin: 0 -0.5rem;
+      border-bottom: 1px solid $white;
+      font-size: 0.75rem;
+      text-align: right;
+      background: $white;
+    }
+  
+    &__label {
+      margin-right: 1rem;
+      color: $secondary;
+      float: left;
+    }
+  
+    &__field {
+      display: inline-block;
+      margin: 0 0.125rem;
+    }
+  
+    &__day {
+      color: $white;
+  
+      div {
+        cursor: pointer;
+        display: block;
+        box-sizing: border-box;
+        border: 0;
+        margin: 0;
+        background: transparent;
+        position: relative;
+  
+        &:hover {
+          background: $black;
+        }
+      }
+  
+      &.is-today .datepicker__daynum {
+        text-decoration: underline;
+      }
+  
+      &.is-selected {
+        div {
+          background: $white;
+        }
+  
+        .datepicker__daynum {
+          font-weight: bold;
+        }
+      }
+  
+      &.is-disabled,
+      &.is-otherMonth {
+        cursor: default;
+        pointer-events: none;
+        color: $secondary;
+  
+        &.is-selected {
+          .datepicker__daynum {
+            color: $black;
+          }
+  
+          div {
+            background: $white;
+          }
+        }
+      }
+    }
+  
+    &__daynum {
+      display: block;
+      font-size: 0.75rem;
+      line-height: 2rem;
+      text-align: center;
+    }
+  }
+  

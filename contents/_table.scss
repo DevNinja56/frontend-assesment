@@ -6,175 +6,174 @@
 
 #dataTable_wrapper {
   overflow: auto;
-}
+  table::-webkit-scrollbar {
+    display: none;
+  }
 
-table::-webkit-scrollbar {
-  display: none;
-}
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    margin-top: 16px;
 
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 8px;
-  margin-top: 16px;
+    thead {
+      th {
+        color: $secondary;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: left;
+        background-color: $gray;
+        padding: 20px 0px;
+        border: none;
+        &.sorting {
+          &.sorting_asc {
+            & svg path.top {
+              fill: $primary !important;
+            }
+          }
+          &.sorting_desc {
+            & svg path.bottom {
+              fill: $primary !important;
+            }
+          }
+        }
+      }
+    }
 
-  thead {
-    th {
-      color: $secondary;
-      font-weight: 500;
-      font-size: 14px;
-      text-align: left;
-      background-color: $gray;
-      padding: 20px 0px;
+    tbody {
+      td {
+        color: $white;
+        font-size: 15px;
+        padding: 30px 0px;
+        border-bottom: 1px solid $gray;
+      }
+    }
+
+    .sort-label-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    tr {
+      th {
+        &:nth-child(3) {
+          padding-top: 26px;
+        }
+      }
+    }
+
+    th:first-child,
+    td:first-child {
+      min-width: 100px;
+      text-align: center;
+      border-radius: 7px 0px 0px 7px;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      min-width: 200px;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 34px;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+      min-width: 100px;
+    }
+
+    th:nth-child(5),
+    td:nth-child(5) {
+      min-width: 160px;
+    }
+
+    th:last-child,
+    td:last-child {
+      min-width: 310px;
+      border-radius: 0px 7px 7px 0px;
+    }
+
+    input[type="checkbox"] {
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border: 2px solid $white;
+      border-radius: 4px;
+      cursor: pointer;
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+      position: relative;
+    }
+
+    input[type="checkbox"]:checked {
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    input[type="checkbox"]:checked::after {
+      content: "";
+      position: absolute;
+      left: 4.5px;
+      top: 1px;
+      width: 3px;
+      height: 8px;
+      border: solid $white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .table-profile-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .table-buttons-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .action-container {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .action-btn-approve {
+      background-color: $primary;
       border: none;
-      &.sorting {
-        &.sorting_asc {
-          & svg path.top {
-            fill: $primary !important;
-          }
-        }
-        &.sorting_desc {
-          & svg path.bottom {
-            fill: $primary !important;
-          }
-        }
-      }
-    }
-  }
-
-  tbody {
-    td {
+      border-radius: 20px;
       color: $white;
+      padding: 8px 16px;
+      cursor: pointer;
       font-size: 15px;
-      padding: 30px 0px;
-      border-bottom: 1px solid $gray;
-    }
-  }
-
-  .sort-label-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-  }
-
-  tr {
-    th {
-      &:nth-child(3) {
-        padding-top: 26px;
+      transition: background-color 0.3s ease;
+      font-weight: 700;
+      &:hover {
+        background-color: $dark-purple;
       }
     }
-  }
 
-  th:first-child,
-  td:first-child {
-    min-width: 100px;
-    text-align: center;
-    border-radius: 7px 0px 0px 7px;
-  }
-
-  th:nth-child(2),
-  td:nth-child(2) {
-    min-width: 200px;
-  }
-
-  th:nth-child(3),
-  td:nth-child(3) {
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 24px;
-  }
-
-  th:nth-child(4),
-  td:nth-child(4) {
-    min-width: 100px;
-  }
-
-  th:nth-child(5),
-  td:nth-child(5) {
-    min-width: 160px;
-  }
-
-  th:last-child,
-  td:last-child {
-    min-width: 310px;
-    border-radius: 0px 7px 7px 0px;
-  }
-
-  input[type="checkbox"] {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    border: 2px solid $white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease;
-    position: relative;
-  }
-
-  input[type="checkbox"]:checked {
-    background-color: $primary;
-    border-color: $primary;
-  }
-
-  input[type="checkbox"]:checked::after {
-    content: "";
-    position: absolute;
-    left: 4.5px;
-    top: 1px;
-    width: 3px;
-    height: 8px;
-    border: solid $white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
-
-  .table-profile-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .table-buttons-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .action-container {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-  }
-
-  .action-btn-approve {
-    background-color: $primary;
-    border: none;
-    border-radius: 20px;
-    color: $white;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
-    font-weight: 700;
-    &:hover {
-      background-color: $dark-purple;
+    .action-btn-reject {
+      border: 1px solid $secondary;
+      background-color: transparent;
+      border-radius: 20px;
+      color: $white;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
     }
-  }
-
-  .action-btn-reject {
-    border: 1px solid $secondary;
-    background-color: transparent;
-    border-radius: 20px;
-    color: $white;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 700;
   }
 }
 

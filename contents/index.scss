@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,20 +7,21 @@
   font-family: "Urbanist", sans-serif;
 }
 
-@import "_config";
+@import "config";
 
 body {
   background-color: $black;
 }
 
-@import "header.scss";
-@import "mainSection.scss";
-@import "sidebar.scss";
-@import "filters.scss";
-@import "dashboard.scss";
-@import "leaveRequest.scss";
-@import "table.scss";
-@import "responsive.scss";
-@import "notification.scss";
-@import "modal.scss";
-@import "selectBox.scss";
+@import "header";
+@import "mainSection";
+@import "sidebar";
+@import "filters";
+@import "dashboard";
+@import "leaveRequest";
+@import "table";
+@import "responsive";
+@import "notification";
+@import "modal";
+@import "selectBox";
+@import "date-picker";
