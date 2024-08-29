@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx gulp"
+    "dev": "gulp --gulpfile assets/js/gulpfile.js" 
   },
   "keywords": [],
   "author": "",
