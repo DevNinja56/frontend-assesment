@@ -1,0 +1,213 @@
+#dataTable_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#dataTable_wrapper {
+  overflow: auto;
+}
+
+table::-webkit-scrollbar {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-top: 16px;
+}
+table thead th {
+  color: #898989;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+  background-color: #272727;
+  padding: 20px 0px;
+  border: none;
+}
+table thead th.sorting.sorting_asc svg path.top {
+  fill: #6e56e0 !important;
+}
+table thead th.sorting.sorting_desc svg path.bottom {
+  fill: #6e56e0 !important;
+}
+table tbody td {
+  color: #ffffff;
+  font-size: 15px;
+  padding: 30px 0px;
+  border-bottom: 1px solid #272727;
+}
+table .sort-label-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+table tr th:nth-child(3) {
+  padding-top: 26px;
+}
+table th:first-child,
+table td:first-child {
+  min-width: 100px;
+  text-align: center;
+  border-radius: 7px 0px 0px 7px;
+}
+table th:nth-child(2),
+table td:nth-child(2) {
+  min-width: 200px;
+}
+table th:nth-child(3),
+table td:nth-child(3) {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+table th:nth-child(4),
+table td:nth-child(4) {
+  min-width: 100px;
+}
+table th:nth-child(5),
+table td:nth-child(5) {
+  min-width: 160px;
+}
+table th:last-child,
+table td:last-child {
+  min-width: 310px;
+  border-radius: 0px 7px 7px 0px;
+}
+table input[type=checkbox] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+table input[type=checkbox]:checked {
+  background-color: #6e56e0;
+  border-color: #6e56e0;
+}
+table input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  left: 4.5px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+table .table-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+table .table-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+table .action-container {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+table .action-btn-approve {
+  background-color: #6e56e0;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+table .action-btn-approve:hover {
+  background-color: rgba(66, 49, 153, 0.9450980392);
+}
+table .action-btn-reject {
+  border: 1px solid #898989;
+  background-color: transparent;
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.user-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.active-user-div {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #288a05;
+}
+
+.non-active-user-div {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #ffa424;
+}
+
+.table-header-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+.table-header-checkbox-container div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.table-header-checkbox-container div h2 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #898989;
+}
+
+.dataTables_paginate {
+  padding: 16px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dataTables_paginate a {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ffffff;
+  background-color: #272727;
+  cursor: pointer;
+}
+.dataTables_paginate span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.paginate_button .disabled {
+  color: #898989;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.action-container img {
+  cursor: pointer;
+}

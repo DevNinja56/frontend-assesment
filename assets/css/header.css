@@ -1,0 +1,71 @@
+header {
+  width: 100%;
+  border-bottom: 1px solid #272727;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #151515;
+  z-index: 50;
+}
+
+.header-container-1 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 20px 16px 20px 40px;
+}
+.header-container-1 div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-container-1 div h1 {
+  font-weight: 900;
+  font-size: 23px;
+  color: #ffffff;
+}
+
+.header-container-2 {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-container-2 .header-container-2-first-div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-container-2 .header-container-2-first-div h1 {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+}
+.header-container-2 .header-container-2-second-div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header-container-2 .header-container-2-second-div .input-with-icon {
+  position: relative;
+}
+.header-container-2 .header-container-2-second-div .input-with-icon img {
+  position: absolute;
+  background-color: #272727;
+  left: 16px;
+  top: 8px;
+}
+.header-container-2 .header-container-2-second-div .input-with-icon input {
+  width: 280px;
+  padding: 8px 16px 8px 56px;
+  border-radius: 20px;
+  height: 40px;
+  background-color: #272727;
+  outline: none;
+  font-size: 11px;
+  color: #898989;
+  border: none;
+}

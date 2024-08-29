@@ -1,0 +1,155 @@
+.dashboard-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+}
+.dashboard-main-container h1 {
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff;
+}
+.dashboard-main-container .dashboard-container {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+.dashboard-main-container .dashboard-heatmap-main-container {
+  width: 50%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #272727;
+  background-color: rgba(39, 39, 39, 0.4666666667);
+}
+.dashboard-main-container .dashboard-heatmap-main-container .heatmap-date-div-container {
+  padding: 10px 16px 10px 24px;
+  border-bottom: 1px solid #272727;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .heatmap-date-div-container h1 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .heatmap-date-div {
+  display: flex;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .heatmap-date-div div {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #898989;
+  position: relative;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .heatmap-date-div div select {
+  position: absolute;
+  top: 38px;
+  right: 20px;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .dashboard-days-main-container {
+  padding: 8px 16px;
+  width: 100%;
+  display: flex;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .dashboard-days-main-container div {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #272727;
+  padding: 10px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .dashboard-days-main-container div:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .dashboard-days-main-container div:last-child {
+  border-radius: 0 8px 8px 0;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .dashboard-days-main-container div:nth-child(5) {
+  background-color: #c33535;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .leaves-main-container {
+  padding: 8px 48px;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .leaves-main-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .leaves-main-container div h1 {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 400;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .leaves-main-container div .progress-circle {
+  --size: 100px;
+  --progress: 0;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: conic-gradient(#6e56e0 calc(var(--progress) * 1%), #272727 calc(var(--progress) * 1%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .leaves-main-container div .progress-circle::before {
+  content: "";
+  width: calc(var(--size) * 0.86);
+  height: calc(var(--size) * 0.86);
+  background-color: #1e1e1e;
+  border-radius: 50%;
+  position: absolute;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .leaves-main-container div .progress-circle .progress-value {
+  font-size: calc(var(--size) * 0.25);
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .popular-day-container {
+  padding: 16px 24px;
+  width: 100%;
+  border-top: 1px solid #272727;
+  font-weight: 400;
+  font-size: 12px;
+  color: #898989;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .most-days-away-people-container {
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .most-days-away-people-container .people-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .most-days-away-people-container .people-container h1 {
+  font-size: 14px;
+  color: #898989;
+  font-weight: 400;
+}
+.dashboard-main-container .dashboard-heatmap-main-container .most-days-away-people-container p {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 400;
+}

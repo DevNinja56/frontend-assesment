@@ -1,0 +1,43 @@
+.filter-main-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.filter-main-container .filter-div {
+  display: flex;
+}
+.filter-main-container .filter-div div {
+  padding: 18px 8px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #898989;
+  cursor: pointer;
+}
+.filter-main-container .filter-div div:hover {
+  color: #ffffff;
+}
+.filter-main-container .filter-div .filter-div-first {
+  border-bottom: 2px solid #6e56e0;
+  color: #ffffff;
+}
+
+.filter-div-active {
+  height: 4px;
+  width: 4px;
+  background-color: #ffd928;
+  padding: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+.filterIcon {
+  cursor: pointer;
+}
+
+.filterIcon path {
+  transition: all 300ms;
+}
+.filterIcon:hover path {
+  fill: #ffffff;
+}

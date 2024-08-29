@@ -1,0 +1,81 @@
+@import "_config";
+
+.modal-main-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000a3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 9999;
+  .modal {
+    border-radius: 12px;
+    padding: 20px 32px;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    gap: 33px;
+    .cross-div-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: $white;
+        width: auto;
+      }
+      .cross-div {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: $gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 20px;
+      color: $white;
+      text-align: center;
+      width: 408px;
+      line-height: 36px;
+    }
+    .buttons-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 16px;
+
+      button {
+        padding: 9.5px 33px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 15px;
+        color: $white;
+        transition: all;
+        transition-duration: 300ms;
+        background-color: transparent;
+        border: 1px solid $white;
+        cursor: pointer;
+      }
+      .approve-modal-button {
+        background-color: $primary;
+        border: 1px solid $primary;
+        &:hover {
+          background-color: $dark-purple;
+        }
+      }
+    }
+  }
+}

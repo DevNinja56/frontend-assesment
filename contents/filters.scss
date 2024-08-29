@@ -1,0 +1,47 @@
+@import "_config";
+
+.filter-main-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .filter-div {
+    display: flex;
+    div {
+      padding: 18px 8px;
+      font-weight: 400;
+      font-size: 15px;
+      color: $secondary;
+      cursor: pointer;
+      &:hover {
+        color: $white;
+      }
+    }
+    .filter-div-first {
+      border-bottom: 2px solid $primary;
+      color: $white;
+    }
+  }
+}
+
+.filter-div-active {
+  height: 4px;
+  width: 4px;
+  background-color: $yellow;
+  padding: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+.filterIcon {
+  cursor: pointer;
+}
+
+.filterIcon {
+  path {
+    transition: all 300ms;
+  }
+  &:hover path {
+    fill: $white;
+  }
+}

@@ -1,0 +1,18 @@
+.main-section-container {
+  display: flex;
+  width: 100%;
+  margin-top: 82px;
+}
+
+.main-section {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.main-section-2 {
+  width: calc(100vw - 278px);
+  padding-top: 16px;
+  padding-right: 40px;
+  margin-bottom: 40px;
+}
