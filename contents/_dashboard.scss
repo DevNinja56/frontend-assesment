@@ -1,20 +1,28 @@
+// Import configuration settings, such as variables and mixins
 @import "_config";
 
+// Main container for the dashboard, structured as a column
 .dashboard-main-container {
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding-top: 16px;
+
+  // Dashboard title styling
   h1 {
     font-weight: 700;
     font-size: 28px;
     color: $white;
   }
+
+  // Container for dashboard elements, set to take full width and align items horizontally
   .dashboard-container {
     width: 100%;
     display: flex;
     gap: 16px;
   }
+
+  // Main container for the dashboard heatmap, including border and background styles
   .dashboard-heatmap-main-container {
     width: 50%;
     border-radius: 8px;
@@ -23,6 +31,8 @@
     gap: 10px;
     border: 1px solid $gray;
     background-color: $light-gray;
+
+    // Container for the heatmap date section with padding and border at the bottom
     .heatmap-date-div-container {
       padding: 10px 16px 10px 24px;
       border-bottom: 1px solid $gray;
@@ -30,12 +40,16 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
+
+      // Styling for titles within the heatmap date section
       h1 {
         font-weight: 600;
         font-size: 16px;
         color: $white;
       }
     }
+
+    // Flex container for date-related elements within the heatmap
     .heatmap-date-div {
       display: flex;
 
@@ -48,6 +62,8 @@
         font-weight: 400;
         color: $secondary;
         position: relative;
+
+        // Position the select dropdown within the date div
         select {
           position: absolute;
           top: 38px;
@@ -55,6 +71,8 @@
         }
       }
     }
+
+    // Container for displaying the days in the heatmap, with flexible child divs
     .dashboard-days-main-container {
       padding: 8px 16px;
       width: 100%;
@@ -69,6 +87,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        // Rounded borders for the first and last child elements
         &:first-child {
           border-radius: 8px 0 0 8px;
         }
@@ -76,12 +96,16 @@
           border-radius: 0 8px 8px 0;
         }
       }
+
+      // Highlight the 5th day with a danger background color
       div {
         &:nth-child(5) {
           background-color: $danger;
         }
       }
     }
+
+    // Container for displaying leave statistics, aligned horizontally
     .leaves-main-container {
       padding: 8px 48px;
       display: flex;
@@ -93,11 +117,15 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
+
+        // Title styling within the leave statistics section
         h1 {
           font-size: 15px;
           color: $white;
           font-weight: 400;
         }
+
+        // Progress circle visualization for statistics
         .progress-circle {
           --size: 100px;
           --progress: 0;
@@ -112,6 +140,8 @@
           align-items: center;
           justify-content: center;
           position: relative;
+
+          // Inner circle within the progress circle
           &::before {
             content: "";
             width: calc(var(--size) * 0.86);
@@ -120,6 +150,8 @@
             border-radius: 50%;
             position: absolute;
           }
+
+          // Text displaying the progress value within the circle
           .progress-value {
             font-size: calc(var(--size) * 0.25);
             font-weight: bold;
@@ -130,6 +162,8 @@
         }
       }
     }
+
+    // Container for displaying the most popular day, styled with padding and borders
     .popular-day-container {
       padding: 16px 24px;
       width: 100%;
@@ -138,11 +172,15 @@
       font-size: 12px;
       color: $secondary;
     }
+
+    // Container for displaying the people with the most days away, aligned horizontally
     .most-days-away-people-container {
       padding: 8px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      // Styling for each person within the most days away section
       .people-container {
         display: flex;
         align-items: center;
@@ -153,6 +191,8 @@
           font-weight: 400;
         }
       }
+
+      // Paragraph styling for the most days away text
       p {
         font-size: 14px;
         color: $white;

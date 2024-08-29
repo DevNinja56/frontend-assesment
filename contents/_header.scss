@@ -1,80 +1,84 @@
+// Import configuration settings, such as variables and mixins
 @import "_config";
 
+// Header styling
 header {
-  width: 100%;
-  border-bottom: 1px solid $gray;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $black;
-  z-index: 50;
+  width: 100%; // Full width of the viewport
+  border-bottom: 1px solid $gray; // Bottom border for separation
+  display: flex; // Flexbox layout for header elements
+  align-items: center; // Vertically center the items
+  position: fixed; // Fix the header at the top of the page
+  top: 0; // Position at the very top
+  left: 0; // Position at the very left
+  background-color: $black; // Black background for the header
+  z-index: 50; // Ensure the header is above other content
 }
 
+// First container within the header
 .header-container-1 {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  padding: 20px 16px 20px 40px;
+  display: flex; // Flexbox layout for container items
+  align-items: center; // Vertically center the items
+  gap: 50px; // Space between child elements
+  padding: 20px 16px 20px 40px; // Padding for the container
 
   div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex; // Flexbox layout for nested divs
+    align-items: center; // Vertically center the items
+    gap: 8px; // Space between nested elements
 
     h1 {
-      font-weight: 900;
-      font-size: 23px;
-      color: $white;
+      font-weight: 900; // Bold font for the header text
+      font-size: 23px; // Font size for the header text
+      color: $white; // White text color
     }
   }
 }
 
+// Second container within the header
 .header-container-2 {
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  padding: 20px 40px; // Padding for the container
+  display: flex; // Flexbox layout for container items
+  align-items: center; // Vertically center the items
+  justify-content: space-between; // Space between the two main sections
+  width: 100%; // Full width for the container
 
   .header-container-2-first-div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex; // Flexbox layout for child elements
+    align-items: center; // Vertically center the items
+    gap: 8px; // Space between child elements
 
     h1 {
-      font-weight: 600;
-      color: $white;
-      font-size: 16px;
+      font-weight: 600; // Semi-bold font for the text
+      color: $white; // White text color
+      font-size: 16px; // Font size for the text
     }
   }
 
   .header-container-2-second-div {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    display: flex; // Flexbox layout for child elements
+    align-items: center; // Vertically center the items
+    gap: 16px; // Space between child elements
 
     .input-with-icon {
-      position: relative;
+      position: relative; // Position relative to its container
 
       img {
-        position: absolute;
-        background-color: $gray;
-        left: 16px;
-        top: 8px;
+        position: absolute; // Absolute positioning for the icon
+        background-color: $gray; // Gray background for the icon
+        left: 16px; // Position 16px from the left
+        top: 8px; // Position 8px from the top
       }
 
       input {
-        width: 280px;
-        padding: 8px 16px 8px 56px;
-        border-radius: 20px;
-        height: 40px;
-        background-color: $gray;
-        outline: none;
-        font-size: 11px;
-        color: $secondary;
-        border: none;
+        width: 280px; // Input field width
+        padding: 8px 16px 8px 56px; // Padding for the input field
+        border-radius: 20px; // Rounded corners for the input
+        height: 40px; // Height of the input field
+        background-color: $gray; // Gray background for the input field
+        outline: none; // Remove default outline
+        font-size: 11px; // Font size for the input text
+        color: $secondary; // Secondary color for the input text
+        border: none; // Remove the default border
       }
     }
   }

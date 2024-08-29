@@ -1,18 +1,23 @@
+// Main container for the section, taking up full width and applying a top margin
 .main-section-container {
-  display: flex;
-  width: 100%;
-  margin-top: 82px;
+  display: flex; // Flexbox layout for the container
+  width: 100%; // Full width of the container
+  margin-top: 82px; // Top margin to create space above the container
 }
 
+// Main section inside the container, also taking up full width
 .main-section {
-  width: 100%;
-  display: flex;
-  justify-content: end;
+  width: 100%; // Full width of the section
+  display: flex; // Flexbox layout for the section
+  justify-content: end; // Align child elements to the end (right side)
 }
 
+// Secondary section inside the container with specific width and padding
 .main-section-2 {
-  width: calc(100vw - 278px);
-  padding-top: 16px;
-  padding-right: 40px;
-  margin-bottom: 40px;
+  width: calc(
+    100vw - 278px
+  ); // Calculate width based on the viewport minus a fixed width
+  padding-top: 16px; // Top padding to create space inside the section
+  padding-right: 40px; // Right padding for spacing inside the section
+  margin-bottom: 40px; // Bottom margin to create space below the section
 }

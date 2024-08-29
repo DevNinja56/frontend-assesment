@@ -1,51 +1,71 @@
+// Import configuration settings, such as variables and mixins
 @import "./config";
+
+// Styling for the Select2 container
 .select2-container {
-  width: 100px !important;
+  width: 100px !important; // Set the width of the Select2 container
 
+  // Styles for the Select2 selection box
   .select2-selection {
-    height: 40px;
-    border-radius: 8px;
-    background-color: transparent;
+    height: 40px; // Set the height of the selection box
+    border-radius: 8px; // Apply rounded corners
+    background-color: transparent; // Make the background transparent
   }
+
+  // Styles for the rendered text within the Select2 selection box
   .select2-selection__rendered {
-    line-height: 40px;
-    color: #333;
-    padding-left: 10px;
+    line-height: 40px; // Align text vertically
+    color: #333; // Set the text color
+    padding-left: 10px; // Add padding to the left
   }
+
+  // Styles for the dropdown menu of the Select2 component
   .select2-dropdown {
-    border-radius: 8px;
-    border: 1px solid $gray;
-    background-color: $gray-black;
+    border-radius: 8px; // Apply rounded corners to the dropdown
+    border: 1px solid $gray; // Set border color
+    background-color: $gray-black; // Set background color
   }
+
+  // Styles for each option in the dropdown menu
   .select2-results__option {
-    padding: 10px;
-    font-size: 14px;
-    color: $secondary;
-    background-color: $gray-black;
+    padding: 10px; // Add padding to each option
+    font-size: 14px; // Set the font size
+    color: $secondary; // Set the text color
+    background-color: $gray-black; // Set the background color
+
+    // Style for non-highlighted options
     &:not(.select2-results__option--highlighted) {
-      background-color: $gray-black;
+      background-color: $gray-black; // Ensure non-highlighted options have the same background
     }
   }
+
+  // Styles for the highlighted option in the dropdown menu
   .select2-results__option--highlighted {
-    background-color: $primary !important;
-    color: white;
+    background-color: $primary !important; // Change background color for highlighted option
+    color: white; // Set text color to white
   }
 }
 
+// Default styling for the Select2 container
 .select2-container--default {
+  // Styles for single selection mode
   .select2-selection--single {
-    background-color: transparent !important;
-    border: none !important;
-    color: $secondary !important;
+    background-color: transparent !important; // Make the background transparent
+    border: none !important; // Remove the border
+    color: $secondary !important; // Set the text color
+
+    // Styles for the rendered text in single selection mode
     .select2-selection__rendered {
-      color: $secondary !important;
+      color: $secondary !important; // Set text color
     }
   }
 }
 
+// Styles for the Select2 container when focused
 .select2-container--focus {
+  // Styles for the selection box when focused
   .select2-selection {
-    outline: none;
-    border-color: #007bff;
+    outline: none; // Remove default outline
+    border-color: #007bff; // Change border color to blue when focused
   }
 }

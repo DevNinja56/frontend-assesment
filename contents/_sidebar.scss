@@ -1,71 +1,89 @@
+// Import configuration settings, such as variables and mixins
 @import "_config";
 
+// Hide scrollbar for the sidebar container
 .side-bar-main-container::-webkit-scrollbar {
-  display: none;
+  display: none; // Prevent scrollbar from appearing
 }
+
+// Main styling for the sidebar container
 .side-bar-main-container {
-  border-right: 1px solid $gray;
-  padding-right: 20px;
+  border-right: 1px solid $gray; // Add a border to the right
+  padding-right: 20px; // Add padding to the right
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  position: fixed;
-  top: 85px;
-  height: 100vh;
-  overflow-y: auto;
-  padding-bottom: 100px;
-  background-color: $black;
-  z-index: 60;
+  flex-direction: column; // Arrange child elements vertically
+  gap: 8px; // Add space between child elements
+  position: fixed; // Fix the sidebar in place
+  top: 85px; // Position it from the top of the viewport
+  height: 100vh; // Make the sidebar full height of the viewport
+  overflow-y: auto; // Allow vertical scrolling if needed
+  padding-bottom: 100px; // Add bottom padding
+  background-color: $black; // Set background color
+  z-index: 60; // Set stack order for positioning
+
+  // Styling for the fifth child element within the sidebar
   div {
     &:nth-child(5) {
-      background-color: $primary;
+      background-color: $primary; // Set background color for the fifth item
       h1 {
-        color: $white;
-        font-weight: 500;
+        color: $white; // Set text color
+        font-weight: 500; // Set font weight
       }
       &:hover {
-        background-color: $dark-purple;
+        background-color: $dark-purple; // Change background color on hover
       }
     }
   }
+
+  // General styling for div elements within the sidebar
   div {
-    padding: 14px 16px 14px 40px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border-radius: 0 40px 40px 0;
-    cursor: pointer;
+    padding: 14px 16px 14px 40px; // Add padding inside each div
+    display: flex; // Use flexbox layout
+    align-items: center; // Align items vertically
+    gap: 12px; // Add space between items
+    border-radius: 0 40px 40px 0; // Apply rounded corners
+    cursor: pointer; // Change cursor to pointer on hover
+
     &:hover {
-      background-color: rgba(255, 255, 255, 0.092);
+      background-color: rgba(
+        255,
+        255,
+        255,
+        0.092
+      ); // Light background color on hover
       svg {
         path {
-          fill: $white;
+          fill: $white; // Change SVG path fill color on hover
         }
       }
       h1 {
-        color: $white;
-        font-weight: 500;
+        color: $white; // Change text color on hover
+        font-weight: 500; // Set font weight on hover
       }
     }
   }
+
+  // Styling for heading elements within the sidebar
   h1 {
-    font-size: 15px;
-    color: $secondary;
-    font-weight: 400;
+    font-size: 15px; // Set font size
+    color: $secondary; // Set text color
+    font-weight: 400; // Set font weight
   }
 }
 
+// Styling for recruitment numbers badge
 .recruitment-numbers {
-  height: 24px;
-  width: 28px;
-  border-radius: 20px !important;
-  background-color: $yellow;
-  padding: 0 8px !important;
-  font-weight: 500;
-  justify-content: center;
-  font-size: 12px;
-  margin-left: 8px;
+  height: 24px; // Set height of the badge
+  width: 28px; // Set width of the badge
+  border-radius: 20px !important; // Apply rounded corners
+  background-color: $yellow; // Set background color
+  padding: 0 8px !important; // Add padding inside the badge
+  font-weight: 500; // Set font weight
+  justify-content: center; // Center content horizontally
+  font-size: 12px; // Set font size
+  margin-left: 8px; // Add margin to the left
+
   &:hover {
-    background-color: $yellow !important;
+    background-color: $yellow !important; // Ensure background color remains the same on hover
   }
 }

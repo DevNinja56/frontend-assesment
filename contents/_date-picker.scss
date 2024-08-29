@@ -1,176 +1,190 @@
+// Import configuration settings, such as variables and mixins
 @import "_config";
 
 .datepicker {
-    display: inline-block;
-    -webkit-tap-highlight-color: $black;
-  
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      border-spacing: 0;
-      border: 0;
-  
-      th,
-      td {
-        width: calc(100% / 7);
-        padding: 0.0625rem;
-      }
-  
-      th {
-        color: $white;
-        text-transform: uppercase;
-        font-size: 0.5rem;
-        line-height: 4;
-        font-weight: bold;
-        text-align: center;
-      }
+  display: inline-block;
+  -webkit-tap-highlight-color: $black;
+
+  // Table styling within the datepicker
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+
+    th,
+    td {
+      width: calc(100% / 7); // Each cell takes up 1/7th of the width
+      padding: 0.0625rem; // Small padding for table cells
     }
-  
-    &__wrapper {
-      color: $secondary;
-      border-radius: 0.125rem;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      position: relative;
-      z-index: 1;
-      background: $gray-black;
-      border: 1px solid $gray;
-      width: 16rem;
-  
-      &::after {
-        content: '';
-        display: table;
-        clear: both;
-      }
-    }
-  
-    &:not(.is-inline) &__wrapper {
-      box-shadow: 0 1px 3px $black, 0 1px 2px $black;
-      margin: 0.25rem 0;
-    }
-  
-    &__header {
-      position: relative;
-      text-align: center;
-      padding: 0.25rem;
-      justify-content: center;
-      border-bottom: 1px solid $white;
-      background: $primary;
-      color: $white;
-    }
-  
-    &__title {
-      display: inline-block;
-      padding: 0.25rem;
-      font-size: 0.875rem;
-      line-height: 1.5rem;
+
+    th {
+      color: $white; // Header text color
+      text-transform: uppercase; // Uppercase text for headers
+      font-size: 0.5rem; // Small font size
+      line-height: 4;
       font-weight: bold;
-    }
-  
-    &__prev,
-    &__next {
-      display: block;
-      cursor: pointer;
-      position: relative;
-      outline: none;
-      width: 2rem;
-      line-height: 2rem;
-      border-radius: 50%;
-      background: no-repeat center / 60%;
-      opacity: 0.8;
-  
-      &:hover {
-        opacity: 1;
-      }
-  
-      &.is-disabled {
-        pointer-events: none;
-        cursor: default;
-        opacity: 0.4;
-      }
-    }
-  
-    &__prev {
-      float: left;
-    }
-  
-    &__next {
-      float: right;
-    }
-  
-    &__time {
-      padding: 0.5rem 1rem;
-      margin: 0 -0.5rem;
-      border-bottom: 1px solid $white;
-      font-size: 0.75rem;
-      text-align: right;
-      background: $white;
-    }
-  
-    &__label {
-      margin-right: 1rem;
-      color: $secondary;
-      float: left;
-    }
-  
-    &__field {
-      display: inline-block;
-      margin: 0 0.125rem;
-    }
-  
-    &__day {
-      color: $white;
-  
-      div {
-        cursor: pointer;
-        display: block;
-        box-sizing: border-box;
-        border: 0;
-        margin: 0;
-        background: transparent;
-        position: relative;
-  
-        &:hover {
-          background: $black;
-        }
-      }
-  
-      &.is-today .datepicker__daynum {
-        text-decoration: underline;
-      }
-  
-      &.is-selected {
-        div {
-          background: $white;
-        }
-  
-        .datepicker__daynum {
-          font-weight: bold;
-        }
-      }
-  
-      &.is-disabled,
-      &.is-otherMonth {
-        cursor: default;
-        pointer-events: none;
-        color: $secondary;
-  
-        &.is-selected {
-          .datepicker__daynum {
-            color: $black;
-          }
-  
-          div {
-            background: $white;
-          }
-        }
-      }
-    }
-  
-    &__daynum {
-      display: block;
-      font-size: 0.75rem;
-      line-height: 2rem;
       text-align: center;
     }
   }
-  
+
+  // Main wrapper for the datepicker
+  &__wrapper {
+    color: $secondary;
+    border-radius: 0.125rem; // Slight rounding of corners
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    z-index: 1;
+    background: $gray-black; // Background color for wrapper
+    border: 1px solid $gray; // Border around the wrapper
+    width: 16rem; // Width of the datepicker
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both; // Clear floating elements
+    }
+  }
+
+  // Add box-shadow when not inline and spacing
+  &:not(.is-inline) &__wrapper {
+    box-shadow: 0 1px 3px $black, 0 1px 2px $black;
+    margin: 0.25rem 0;
+  }
+
+  // Header styling
+  &__header {
+    position: relative;
+    text-align: center;
+    padding: 0.25rem;
+    justify-content: center;
+    border-bottom: 1px solid $white;
+    background: $primary; // Primary background for header
+    color: $white; // Header text color
+  }
+
+  // Title text in the header
+  &__title {
+    display: inline-block;
+    padding: 0.25rem;
+    font-size: 0.875rem; // Font size for the title
+    line-height: 1.5rem;
+    font-weight: bold;
+  }
+
+  // Previous and Next buttons
+  &__prev,
+  &__next {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    width: 2rem;
+    line-height: 2rem;
+    border-radius: 50%; // Round buttons
+    background: no-repeat center / 60%;
+    opacity: 0.8; // Slight transparency
+
+    &:hover {
+      opacity: 1; // Full opacity on hover
+    }
+
+    &.is-disabled {
+      pointer-events: none; // Disable interaction
+      cursor: default;
+      opacity: 0.4; // More transparent when disabled
+    }
+  }
+
+  &__prev {
+    float: left; // Align to the left
+  }
+
+  &__next {
+    float: right; // Align to the right
+  }
+
+  // Time display section
+  &__time {
+    padding: 0.5rem 1rem;
+    margin: 0 -0.5rem;
+    border-bottom: 1px solid $white;
+    font-size: 0.75rem; // Small font size
+    text-align: right; // Right-align text
+    background: $white; // Background color for time section
+  }
+
+  // Label for time input
+  &__label {
+    margin-right: 1rem;
+    color: $secondary;
+    float: left;
+  }
+
+  // Time input field styling
+  &__field {
+    display: inline-block;
+    margin: 0 0.125rem;
+  }
+
+  // Day cells within the datepicker
+  &__day {
+    color: $white; // Default text color for days
+
+    div {
+      cursor: pointer;
+      display: block;
+      box-sizing: border-box;
+      border: 0;
+      margin: 0;
+      background: transparent;
+      position: relative;
+
+      &:hover {
+        background: $black; // Background on hover
+      }
+    }
+
+    // Styling for today
+    &.is-today .datepicker__daynum {
+      text-decoration: underline;
+    }
+
+    // Styling for selected days
+    &.is-selected {
+      div {
+        background: $white; // Background color when selected
+      }
+
+      .datepicker__daynum {
+        font-weight: bold;
+      }
+    }
+
+    // Disabled and out-of-month days
+    &.is-disabled,
+    &.is-otherMonth {
+      cursor: default;
+      pointer-events: none; // Disable interaction
+      color: $secondary; // Faded color for disabled days
+
+      &.is-selected {
+        .datepicker__daynum {
+          color: $black;
+        }
+
+        div {
+          background: $white;
+        }
+      }
+    }
+  }
+
+  // Number display within each day cell
+  &__daynum {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+}

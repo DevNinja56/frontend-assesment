@@ -1,27 +1,32 @@
+// Importing Google Fonts for the Urbanist font family with various weights and italics
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
+// Global styling
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Urbanist", sans-serif;
+  padding: 0; // Remove default padding
+  margin: 0; // Remove default margin
+  box-sizing: border-box; // Include padding and border in element's total width and height
+  font-family: "Urbanist", sans-serif; // Apply Urbanist font family to all elements
 }
 
+// Importing configuration variables and mixins
 @import "config";
 
+// Body styling
 body {
-  background-color: $black;
+  background-color: $black; // Set the background color for the entire body
 }
 
-@import "header";
-@import "mainSection";
-@import "sidebar";
-@import "filters";
-@import "dashboard";
-@import "leaveRequest";
-@import "table";
-@import "responsive";
-@import "notification";
-@import "modal";
-@import "selectBox";
-@import "date-picker";
+// Importing various SCSS partials for different sections and components
+@import "header"; // Styles for the header section
+@import "mainSection"; // Styles for the main section
+@import "sidebar"; // Styles for the sidebar
+@import "filters"; // Styles for the filter components
+@import "dashboard"; // Styles for the dashboard section
+@import "leaveRequest"; // Styles for leave request components
+@import "table"; // Styles for tables
+@import "responsive"; // Styles for responsive design adjustments
+@import "notification"; // Styles for notifications
+@import "modal"; // Styles for modals
+@import "selectBox"; // Styles for select boxes
+@import "date-picker"; // Styles for date pickers

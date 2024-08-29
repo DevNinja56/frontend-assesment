@@ -1,39 +1,44 @@
+// Import configuration settings, such as variables and mixins
 @import "_config";
 
+// Hide scrollbar for the data table wrapper
 #dataTable_wrapper::-webkit-scrollbar {
-  display: none;
+  display: none; // Prevent scrollbar from appearing
 }
 
+// Main styling for the data table wrapper
 #dataTable_wrapper {
-  overflow: auto;
+  overflow: auto; // Allow overflow with auto scroll if needed
   table::-webkit-scrollbar {
-    display: none;
+    display: none; // Hide scrollbar for the table itself
   }
 
   table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 8px;
-    margin-top: 16px;
+    width: 100%; // Make the table full width
+    border-collapse: separate; // Use separate borders for table cells
+    border-spacing: 0 8px; // Add space between rows
+    margin-top: 16px; // Add margin at the top
 
     thead {
       th {
-        color: $secondary;
-        font-weight: 500;
-        font-size: 14px;
-        text-align: left;
-        background-color: $gray;
-        padding: 20px 0px;
-        border: none;
+        color: $secondary; // Set text color for table headers
+        font-weight: 500; // Set font weight
+        font-size: 14px; // Set font size
+        text-align: left; // Align text to the left
+        background-color: $gray; // Set background color for table headers
+        padding: 20px 0px; // Add padding inside table headers
+        border: none; // Remove borders from table headers
+
         &.sorting {
+          // Styles for sorting indicators
           &.sorting_asc {
             & svg path.top {
-              fill: $primary !important;
+              fill: $primary !important; // Set fill color for ascending sort indicator
             }
           }
           &.sorting_desc {
             & svg path.bottom {
-              fill: $primary !important;
+              fill: $primary !important; // Set fill color for descending sort indicator
             }
           }
         }
@@ -42,211 +47,222 @@
 
     tbody {
       td {
-        color: $white;
-        font-size: 15px;
-        padding: 30px 0px;
-        border-bottom: 1px solid $gray;
+        color: $white; // Set text color for table cells
+        font-size: 15px; // Set font size
+        padding: 30px 0px; // Add padding inside table cells
+        border-bottom: 1px solid $gray; // Add bottom border to table cells
       }
     }
 
     .sort-label-container {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
+      display: flex; // Use flexbox layout
+      align-items: center; // Align items vertically
+      gap: 8px; // Add space between items
+      cursor: pointer; // Change cursor to pointer
     }
 
     tr {
       th {
         &:nth-child(3) {
-          padding-top: 26px;
+          padding-top: 26px; // Add padding to the top of the third column headers
         }
       }
     }
 
+    // Column-specific styles
     th:first-child,
     td:first-child {
-      min-width: 100px;
-      text-align: center;
-      border-radius: 7px 0px 0px 7px;
+      min-width: 100px; // Set minimum width for the first column
+      text-align: center; // Center-align text
+      border-radius: 7px 0px 0px 7px; // Apply rounded corners to the first column
     }
 
     th:nth-child(2),
     td:nth-child(2) {
-      min-width: 200px;
+      min-width: 200px; // Set minimum width for the second column
     }
 
     th:nth-child(3),
     td:nth-child(3) {
-      min-width: 200px;
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 34px;
+      min-width: 200px; // Set minimum width for the third column
+      display: flex; // Use flexbox layout
+      flex-direction: column; // Arrange child elements in a column
+      padding-bottom: 34px; // Add padding to the bottom
     }
 
     th:nth-child(4),
     td:nth-child(4) {
-      min-width: 100px;
+      min-width: 100px; // Set minimum width for the fourth column
     }
 
     th:nth-child(5),
     td:nth-child(5) {
-      min-width: 160px;
+      min-width: 160px; // Set minimum width for the fifth column
     }
 
     th:last-child,
     td:last-child {
-      min-width: 310px;
-      border-radius: 0px 7px 7px 0px;
+      min-width: 310px; // Set minimum width for the last column
+      border-radius: 0px 7px 7px 0px; // Apply rounded corners to the last column
     }
 
+    // Styling for checkboxes
     input[type="checkbox"] {
-      appearance: none;
-      width: 16px;
-      height: 16px;
-      background-color: transparent;
-      border: 2px solid $white;
-      border-radius: 4px;
-      cursor: pointer;
-      transition:
-        background-color 0.3s ease,
-        border-color 0.3s ease;
-      position: relative;
+      appearance: none; // Remove default appearance
+      width: 16px; // Set width
+      height: 16px; // Set height
+      background-color: transparent; // Set background color
+      border: 2px solid $white; // Add border
+      border-radius: 4px; // Apply rounded corners
+      cursor: pointer; // Change cursor to pointer
+      transition: background-color 0.3s ease,
+        // Smooth background color transition
+        border-color 0.3s ease; // Smooth border color transition
+      position: relative; // Position relative for styling pseudo-element
     }
 
     input[type="checkbox"]:checked {
-      background-color: $primary;
-      border-color: $primary;
+      background-color: $primary; // Set background color when checked
+      border-color: $primary; // Set border color when checked
     }
 
     input[type="checkbox"]:checked::after {
-      content: "";
-      position: absolute;
-      left: 4.5px;
-      top: 1px;
-      width: 3px;
-      height: 8px;
-      border: solid $white;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
+      content: ""; // Empty content for pseudo-element
+      position: absolute; // Position absolutely within the checkbox
+      left: 4.5px; // Position from the left
+      top: 1px; // Position from the top
+      width: 3px; // Set width for checkmark
+      height: 8px; // Set height for checkmark
+      border: solid $white; // Set border color for checkmark
+      border-width: 0 2px 2px 0; // Set border width
+      transform: rotate(45deg); // Rotate to form a checkmark
     }
 
     .table-profile-container {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      display: flex; // Use flexbox layout
+      align-items: center; // Align items vertically
+      gap: 12px; // Add space between items
     }
 
     .table-buttons-container {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      display: flex; // Use flexbox layout
+      align-items: center; // Align items vertically
+      gap: 8px; // Add space between buttons
     }
 
     .action-container {
-      display: flex;
-      align-items: center;
-      gap: 48px;
+      display: flex; // Use flexbox layout
+      align-items: center; // Align items vertically
+      gap: 48px; // Add space between action items
     }
 
     .action-btn-approve {
-      background-color: $primary;
-      border: none;
-      border-radius: 20px;
-      color: $white;
-      padding: 8px 16px;
-      cursor: pointer;
-      font-size: 15px;
-      transition: background-color 0.3s ease;
-      font-weight: 700;
+      background-color: $primary; // Set background color for approve button
+      border: none; // Remove border
+      border-radius: 20px; // Apply rounded corners
+      color: $white; // Set text color
+      padding: 8px 16px; // Add padding inside button
+      cursor: pointer; // Change cursor to pointer
+      font-size: 15px; // Set font size
+      transition: background-color 0.3s ease; // Smooth background color transition
+      font-weight: 700; // Set font weight
       &:hover {
-        background-color: $dark-purple;
+        background-color: $dark-purple; // Change background color on hover
       }
     }
 
     .action-btn-reject {
-      border: 1px solid $secondary;
-      background-color: transparent;
-      border-radius: 20px;
-      color: $white;
-      padding: 8px 16px;
-      cursor: pointer;
-      font-size: 15px;
-      font-weight: 700;
+      border: 1px solid $secondary; // Add border for reject button
+      background-color: transparent; // Set background color to transparent
+      border-radius: 20px; // Apply rounded corners
+      color: $white; // Set text color
+      padding: 8px 16px; // Add padding inside button
+      cursor: pointer; // Change cursor to pointer
+      font-size: 15px; // Set font size
+      font-weight: 700; // Set font weight
     }
   }
 }
 
+// Styling for user checkbox container
 .user-checkbox-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 20px;
+  display: flex; // Use flexbox layout
+  align-items: center; // Align items vertically
+  gap: 10px; // Add space between items
+  padding-left: 20px; // Add padding to the left
 }
 
+// Styling for active user indicator
 .active-user-div {
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background-color: $green;
+  height: 8px; // Set height
+  width: 8px; // Set width
+  border-radius: 50%; // Make the indicator circular
+  background-color: $green; // Set background color for active users
 }
 
+// Styling for non-active user indicator
 .non-active-user-div {
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background-color: $orange;
+  height: 8px; // Set height
+  width: 8px; // Set width
+  border-radius: 50%; // Make the indicator circular
+  background-color: $orange; // Set background color for non-active users
 }
 
+// Styling for table header checkbox container
 .table-header-checkbox-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 20px;
+  display: flex; // Use flexbox layout
+  align-items: center; // Align items vertically
+  gap: 10px; // Add space between items
+  padding-left: 20px; // Add padding to the left
+
   div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; // Use flexbox layout
+    align-items: center; // Align items vertically
+    gap: 10px; // Add space between items
+
     h2 {
-      font-size: 13px;
-      font-weight: 500;
-      color: $secondary;
+      font-size: 13px; // Set font size
+      font-weight: 500; // Set font weight
+      color: $secondary; // Set text color
     }
   }
 }
 
+// Styling for pagination controls
 .dataTables_paginate {
-  padding: 16px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 16px 0px; // Add padding
+  display: flex; // Use flexbox layout
+  align-items: center; // Align items vertically
+  justify-content: space-between; // Space out pagination controls
   a {
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 13px;
-    color: $white;
-    background-color: $gray;
-    cursor: pointer;
+    padding: 10px; // Add padding to pagination links
+    border-radius: 8px; // Apply rounded corners
+    font-weight: 700; // Set font weight
+    font-size: 13px; // Set font size
+    color: $white; // Set text color
+    background-color: $gray; // Set background color
+    cursor: pointer; // Change cursor to pointer
   }
   span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex; // Use flexbox layout
+    align-items: center; // Align items vertically
+    gap: 8px; // Add space between items
   }
 }
 
+// Pagination button styling
 .paginate_button {
   .disabled {
-    color: $secondary;
-    cursor: not-allowed;
-    pointer-events: none;
-    opacity: 0.5;
+    color: $secondary; // Set text color for disabled button
+    cursor: not-allowed; // Change cursor to indicate disabled state
+    pointer-events: none; // Prevent interaction
+    opacity: 0.5; // Reduce opacity for disabled appearance
   }
 }
 
+// Styling for action images
 .action-container {
   img {
-    cursor: pointer;
+    cursor: pointer; // Change cursor to pointer
   }
 }

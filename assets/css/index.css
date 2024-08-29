@@ -204,7 +204,6 @@ header {
 .filterIcon {
   cursor: pointer;
 }
-
 .filterIcon path {
   transition: all 300ms;
 }

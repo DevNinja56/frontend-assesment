@@ -1,5 +1,7 @@
+// Import configuration settings, such as variables and mixins
 @import "_config";
 
+// Responsive styling for screens with a maximum width of 766px
 @media screen and (max-width: 766px) {
   .header-container-1 {
     padding: 20px 16px 20px 24px;
@@ -344,6 +346,7 @@
   }
 }
 
+// Responsive styling for screens with a minimum width of 767px and maximum width of 1022px
 @media screen and (min-width: 767px) and (max-width: 1022px) {
   .header-container-1 {
     padding: 20px 16px 20px 31px;
@@ -479,6 +482,7 @@
   }
 }
 
+// Responsive styling for screens with a minimum width of 1023px and maximum width of 1245px
 @media screen and (min-width: 1023px) and (max-width: 1245px) {
   .header-container-2 {
     padding: 20px 25px;
@@ -538,6 +542,7 @@
   }
 }
 
+// Responsive styling for screens with a minimum width of 1246px
 @media screen and (min-width: 1246px) {
   .small-screen-header-content {
     display: none;

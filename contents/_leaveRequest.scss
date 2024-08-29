@@ -1,145 +1,177 @@
+// Import configuration settings, such as variables and mixins
 @import "_config";
 
+// Main container for the leave request section
 .leaver-request-main-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding-top: 24px;
+  display: flex; // Flexbox layout for main container
+  flex-direction: column; // Arrange items in a column
+  gap: 8px; // Space between child elements
+  padding-top: 24px; // Top padding for the main container
+
+  // Container for the view section of the leave request
   .leaver-request-view-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; // Flexbox layout for view container
+    align-items: center; // Vertically center the items
+    justify-content: space-between; // Space between the title and buttons
+
     h1 {
-      font-weight: 700;
-      color: $white;
-      font-size: 28px;
+      font-weight: 700; // Bold font for the title
+      color: $white; // White text color
+      font-size: 28px; // Font size for the title
     }
+
     div {
-      display: flex;
-      align-items: center;
-      gap: 4px;
+      display: flex; // Flexbox layout for nested divs
+      align-items: center; // Vertically center the items
+      gap: 4px; // Space between child elements
     }
+
     button {
       &:first-child {
-        padding: 9.5px 29px;
-        border-radius: 16px 0px 0px 16px;
-        font-size: 15px;
-        font-weight: 700;
-        color: $white;
-        background-color: $primary;
-        border: none;
+        padding: 9.5px 29px; // Padding for the first button
+        border-radius: 16px 0px 0px 16px; // Rounded corners on the left side
+        font-size: 15px; // Font size for the button text
+        font-weight: 700; // Bold font for the button text
+        color: $white; // White text color
+        background-color: $primary; // Primary color background
+        border: none; // No border
       }
+
       &:last-child {
-        padding: 9.5px 21px;
-        border-radius: 0px 16px 16px 0px;
-        font-size: 15px;
-        font-weight: 400;
-        color: $secondary;
-        background-color: $gray-black;
-        border: none;
-        cursor: pointer;
+        padding: 9.5px 21px; // Padding for the second button
+        border-radius: 0px 16px 16px 0px; // Rounded corners on the right side
+        font-size: 15px; // Font size for the button text
+        font-weight: 400; // Regular font weight
+        color: $secondary; // Secondary color for text
+        background-color: $gray-black; // Gray-black background color
+        border: none; // No border
+        cursor: pointer; // Pointer cursor on hover
+
         &:hover {
-          color: $white;
-          font-weight: 500;
+          color: $white; // Change text color on hover
+          font-weight: 500; // Increase font weight on hover
         }
       }
     }
   }
+
+  // Main container for the leave request table
   .leave-request-table-main-container {
-    width: 100%;
-    border-radius: 8px;
-    background-color: $light-gray;
-    padding: 0px 16px;
-    overflow-x: hidden;
+    width: 100%; // Full width of the container
+    border-radius: 8px; // Rounded corners
+    background-color: $light-gray; // Light gray background
+    padding: 0px 16px; // Padding for the table container
+    overflow-x: hidden; // Hide horizontal overflow
+
+    // Container for the request section within the table
     .leave-request-table-request-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; // Flexbox layout for the request container
+      align-items: center; // Vertically center the items
+      justify-content: space-between; // Space between child elements
+
       .leave-request-table-request-div {
-        display: flex;
-        gap: 16px;
+        display: flex; // Flexbox layout for the request div
+        gap: 16px; // Space between child elements
+
         div {
-          padding: 18px 8px;
-          font-size: 16px;
-          font-weight: 400;
-          color: $secondary;
-          cursor: pointer;
+          padding: 18px 8px; // Padding for the request div
+          font-size: 16px; // Font size for the text
+          font-weight: 400; // Regular font weight
+          color: $secondary; // Secondary color for text
+          cursor: pointer; // Pointer cursor on hover
+
           &:hover {
-            color: $white;
+            color: $white; // Change text color on hover
           }
+
           &:first-child {
-            border-bottom: 3px solid $primary;
-            color: $white;
+            border-bottom: 3px solid $primary; // Bottom border for the first child
+            color: $white; // White text color
           }
         }
       }
+
+      // Swiper container for navigating through requests
       .leave-request-swiper {
-        max-width: 220px;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        position: relative;
-        z-index: 1;
+        max-width: 220px; // Maximum width of the swiper
+        margin: 0; // No margin
+        display: flex; // Flexbox layout for swiper
+        align-items: center; // Vertically center the items
+        gap: 8px; // Space between child elements
+        position: relative; // Relative positioning
+        z-index: 1; // Set z-index for layering
+
         .swiper-button-prev {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: 10px;
-          cursor: pointer;
-          z-index: 10;
+          position: absolute; // Absolute positioning for the previous button
+          top: 50%; // Center vertically
+          transform: translateY(-50%); // Adjust vertical alignment
+          left: 10px; // Position 10px from the left
+          cursor: pointer; // Pointer cursor on hover
+          z-index: 10; // Set z-index for layering
+
           &::after {
-            display: none;
-            content: none;
+            display: none; // Hide default content
+            content: none; // Remove content
           }
         }
+
         .swiper-button-next {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 10px;
-          cursor: pointer;
-          z-index: 0;
+          position: absolute; // Absolute positioning for the next button
+          top: 50%; // Center vertically
+          transform: translateY(-50%); // Adjust vertical alignment
+          right: 10px; // Position 10px from the right
+          cursor: pointer; // Pointer cursor on hover
+          z-index: 0; // Set z-index for layering
+
           &::after {
-            display: none;
-            content: none;
+            display: none; // Hide default content
+            content: none; // Remove content
           }
         }
+
         .swiper-slide {
-          visibility: hidden !important;
+          visibility: hidden !important; // Hide slide by default
+
           &.swiper-slide-active {
-            visibility: visible !important;
+            visibility: visible !important; // Show active slide
           }
         }
       }
+
+      // Calendar container within the request table
       .leave-request-calender-container {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 0 43px;
+        display: flex; // Flexbox layout for the calendar container
+        align-items: center; // Vertically center the items
+        gap: 8px; // Space between child elements
+        padding: 0 43px; // Padding for the container
+
         & > div {
-          display: flex;
-          align-items: center;
-          gap: 8px;
+          display: flex; // Flexbox layout for child divs
+          align-items: center; // Vertically center the items
+          gap: 8px; // Space between child elements
+
           & > h1 {
-            font-weight: 700;
-            font-size: 15px;
-            color: $white;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-weight: 700; // Bold font for the header text
+            font-size: 15px; // Font size for the header text
+            color: $white; // White text color
+            display: flex; // Flexbox layout for text and icon
+            align-items: center; // Vertically center the items
+            gap: 8px; // Space between text and icon
+
             span {
-              color: $secondary;
-              font-weight: 400;
+              color: $secondary; // Secondary color for span text
+              font-weight: 400; // Regular font weight
             }
           }
+
           &:nth-child(2) {
-            padding: 0px 16px;
+            padding: 0px 16px; // Padding for the second child
           }
         }
+
         .date-picker {
-          padding: 10px 0;
-          cursor: pointer;
+          padding: 10px 0; // Padding for the date picker
+          cursor: pointer; // Pointer cursor on hover
         }
       }
     }

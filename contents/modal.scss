@@ -1,79 +1,88 @@
+// Import configuration settings, such as variables and mixins
 @import "_config";
 
+// Styles for the modal main container
 .modal-main-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #000000a3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  z-index: 9999;
+  position: fixed; // Fix the position to the viewport
+  top: 0; // Align to the top of the viewport
+  left: 0; // Align to the left of the viewport
+  background-color: #000000a3; // Semi-transparent black background
+  display: flex; // Use flexbox for layout
+  align-items: center; // Center items vertically
+  justify-content: center; // Center items horizontally
+  height: 100vh; // Full viewport height
+  width: 100%; // Full viewport width
+  z-index: 9999; // High z-index to appear above other content
+
   .modal {
-    border-radius: 12px;
-    padding: 20px 32px;
-    background-color: #1e1e1e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 600px;
-    gap: 33px;
+    border-radius: 12px; // Rounded corners
+    padding: 20px 32px; // Padding inside the modal
+    background-color: #1e1e1e; // Dark background color for the modal
+    display: flex; // Use flexbox for layout
+    flex-direction: column; // Arrange children vertically
+    align-items: center; // Center items horizontally
+    width: 600px; // Fixed width of the modal
+    gap: 33px; // Gap between child elements
+
     .cross-div-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
+      display: flex; // Use flexbox for layout
+      justify-content: space-between; // Space out children horizontally
+      align-items: center; // Center items vertically
+      width: 100%; // Full width of the modal
+
       h1 {
-        font-size: 20px;
-        font-weight: 600;
-        color: $white;
-        width: auto;
+        font-size: 20px; // Font size of the title
+        font-weight: 600; // Font weight for bold text
+        color: $white; // White text color
+        width: auto; // Auto width to fit content
       }
+
       .cross-div {
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        background-color: $gray;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
+        height: 40px; // Fixed height
+        width: 40px; // Fixed width
+        border-radius: 50%; // Circular shape
+        background-color: $gray; // Background color of the close button
+        display: flex; // Use flexbox for centering
+        align-items: center; // Center content vertically
+        justify-content: center; // Center content horizontally
+        cursor: pointer; // Pointer cursor on hover
       }
     }
+
     h1 {
-      font-weight: 600;
-      font-size: 20px;
-      color: $white;
-      text-align: center;
-      width: 408px;
-      line-height: 36px;
+      font-weight: 600; // Font weight for the main title
+      font-size: 20px; // Font size for the main title
+      color: $white; // White text color
+      text-align: center; // Center align the text
+      width: 408px; // Fixed width of the title
+      line-height: 36px; // Line height for spacing
     }
+
     .buttons-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding-top: 16px;
+      display: flex; // Use flexbox for layout
+      align-items: center; // Center items vertically
+      justify-content: space-between; // Space out buttons horizontally
+      width: 100%; // Full width of the modal
+      padding-top: 16px; // Top padding
 
       button {
-        padding: 9.5px 33px;
-        border-radius: 20px;
-        font-weight: 700;
-        font-size: 15px;
-        color: $white;
-        transition: all;
-        transition-duration: 300ms;
-        background-color: transparent;
-        border: 1px solid $white;
-        cursor: pointer;
+        padding: 9.5px 33px; // Padding inside buttons
+        border-radius: 20px; // Rounded corners
+        font-weight: 700; // Bold text
+        font-size: 15px; // Font size
+        color: $white; // White text color
+        transition: all; // Smooth transition for all properties
+        transition-duration: 300ms; // Transition duration
+        background-color: transparent; // Transparent background
+        border: 1px solid $white; // White border
+        cursor: pointer; // Pointer cursor on hover
       }
+
       .approve-modal-button {
-        background-color: $primary;
-        border: 1px solid $primary;
+        background-color: $primary; // Primary background color
+        border: 1px solid $primary; // Border color matching the background
         &:hover {
-          background-color: $dark-purple;
+          background-color: $dark-purple; // Change background on hover
         }
       }
     }
